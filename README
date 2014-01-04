@@ -1,0 +1,38 @@
+voncount: A gcc plugin to report statistics about the code being compiled.
+==========================================================================
+
+What
+----
+voncount is a GCC plugin which merely prints statistics about the files being
+compiled.  Most notably is that this tool prints the line counts and functions
+that GCC processed.
+
+
+Build
+-----
+This is a gcc plugin and uses the plugin framework built with g++ in version 4.7
+of gcc.  To build things simply run `make' from the voncount directory.
+
+
+Use
+---
+Next time you build with gcc 4.7 or higher, include the plugin by passing the
+'-fplugin=voncount.so' flag to gcc.  gcc must know where voncount.so is located,
+if not, you can specify the full path:
+    `gcc foo.c -fplugin=/path/to/voncount.so'
+
+
+Name
+----
+Von Count? WTF?  That's right! This tool, as it counts source lines of code,
+celebrates the name of the best counter the world has ever known.  This number
+friendly gentleman resides just outside of  Sesame Street: Count Von Count.
+
+
+Contact
+-------
+Matt Davis (enferex)
+mattdavis9@gmail.com
+
+            "Five bananas. Six bananas. SEVEN BANANAS! Ah, ah, ah!" 
+                - Count Von Count
